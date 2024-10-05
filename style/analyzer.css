@@ -1,0 +1,33 @@
+.anal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 40px;
+    width: fit-content;
+    margin: auto;
+}
+.app-body > h2 {
+    font-size: 40px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.anal-piece {
+    padding: 2rem 4rem;
+    border-radius: 25px;
+    border: 2px solid black;
+    width: 40rem;
+    margin: 0 auto;
+}
+.anal-funnel {
+    grid-column: span 2;
+    width: 100%;
+}
+
+.filters {
+    margin: auto;
+    width: fit-content;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.filters input {
+    font-size: inherit;
+}

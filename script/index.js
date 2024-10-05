@@ -49,3 +49,4 @@ var options = {
 
   var chart = new ApexCharts(document.querySelector("#funnel"), options);
   chart.render();
+
