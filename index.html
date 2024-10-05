@@ -1,0 +1,99 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/dashboard.css">
+    <meta charset="UTF-8"> 
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1>HRPanel+</h1>
+        <nav class="site-nav">
+            <a href="/">Главная</a>
+            <a href="/vacancies.html">Вакансии</a>
+            <a href="/resumes.html">Резюме</a>
+            <a href="/recruiters.html">Рекрутеры</a>
+            <a href="/analizator.html">Анализатор</a>
+        </nav>
+        <div class="header-icons">
+            <div class="circle-icon">
+                <img src="/icons/signout.svg" alt="выйти">
+            </div>
+            <div class="circle-icon">
+                <img src="/icons/profile.svg" alt="выйти">
+            </div>
+        </div>
+    </header>
+    <hr>
+    <div class="app">
+        <div class="app-body">
+            <div class="app-grid">
+                <section class="section overview-section">
+                    <h2>Статистика</h2>
+                    <div class="tiles">
+                        <article class="tile">
+                                <h3>82</h3>
+                                <p>вакансии</p>
+                        </article>
+                        <article class="tile">
+                            <h3>82</h3>
+                            <p>вакансии</p>
+                        </article>
+                        <article class="tile">
+                            <h3>82</h3>
+                            <p>вакансии</p>
+                        </article>
+                        <article class="tile">
+                            <h3>82</h3>
+                            <p>вакансии</p>
+                        </article>
+                    </div>
+                </section>
+                <section class="section pending-section">
+                    <h2>Текущие задачи</h2>
+                    <ul class="pending-list">
+                        <li>задача 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus laborum neque, nobis voluptate voluptatibus labore saepe deserunt totam recusandae quas.</li>
+                        <li>задача 2</li>
+                        <li>задача 3</li>
+                    </ul>
+                </section>
+                <section class="quick-create-section">
+                    <div class="quick-create">
+                        <img src="icons/plus-circle.svg" alt="" class="bigplus">
+                        <form class="create-form">
+                            <h2>Добавить 
+                                <select class="form-option">
+                                  <option value="volvo">кандидата</option>
+                                  <option value="saab">встречу</option>
+                                  <option value="mercedes">вакансию</option>
+                                </select></h2>
+                            <div class="fields">
+                                <label for="">Имя: <input type="text"></label>
+                                <label for="">Вакансия:                                 <select class="form-option">
+                                    <option value="volvo">кандидата</option>
+                                    <option value="saab">встречу</option>
+                                    <option value="mercedes">вакансию</option>
+                                  </select></label>
+                                <label for="">Источник:                                 <select class="form-option">
+                                    <option value="volvo">кандидата</option>
+                                    <option value="saab">встречу</option>
+                                    <option value="mercedes">вакансию</option>
+                                  </select></label>
+                                <label for="">Ссылка на резюме: <input type="text"></label>
+                            </div>
+                            <button type="submit">ОК</button>
+                        </form>
+                    </div>
+                </section>
+                <section class="infogr-section">
+                    <h2>Статистика</h2>
+                    <div class="info-grid">
+                        <div id="funnel"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="/script/script.js"></script>
+</body>
+</html>

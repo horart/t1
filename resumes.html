@@ -1,0 +1,93 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/table.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header class="site-header">
+        <h1>HRPanel+</h1>
+        <nav class="site-nav">
+            <a href="/">Главная</a>
+            <a href="/vacancies.html">Вакансии</a>
+            <a href="/resumes.html">Резюме</a>
+            <a href="/recruiters.html">Рекрутеры</a>
+            <a href="#">Анализатор</a>
+        </nav>
+        <div class="header-icons">
+            <div class="circle-icon">
+                <img src="/icons/signout.svg" alt="выйти">
+            </div>
+            <div class="circle-icon">
+                <img src="/icons/profile.svg" alt="выйти">
+            </div>
+        </div>
+    </header>
+    <hr>
+    <div class="app">   
+        <div class="app-body">
+            <h2>Резюме</h2>
+            <div class="table-filter">
+                <input type="search" placeholder="Поиск...">
+                <div class="actions">
+                    <button>Удалить</button>
+                </div>
+                <div class="right-filters">
+                    <div class="filter dep">
+                        <button>Выбрать отдел</button>
+                        <div class="checkboxes hidden">
+                            <label><input type="checkbox"><p>Кузнечихинская, 100, IT</p></label>
+                            <label><input type="checkbox"><p>Лопатина, 26, IT</p></label>
+                        </div>
+                    </div>
+                    <div class="filter status">
+                        <button>Статус</button>
+                        <div class="checkboxes hidden">
+                            <label><input type="checkbox"><p>Отказано</p></label>
+                            <label><input type="checkbox"><p>На рассмотрении</p></label>
+                            <label><input type="checkbox"><p>В штате</p></label>
+                        </div>
+                    </div>
+                    <dev class="filter recruiter">
+                        <button>Рекрутер</button>
+                        <div class="checkboxes hidden">
+                            <label><input type="checkbox"><p>Анатолий Карпов</p></label>
+                        </div>
+                    </dev>
+                    <dev class="filter resource">
+                        <button>Рекрутер</button>
+                        <div class="checkboxes hidden">
+                            <label><input type="checkbox"><p>HH.ru</p></label>
+                            <label><input type="checkbox"><p>Авито</p></label>
+                        </div>
+                    </dev>
+                </div>
+            </div>
+            <div class="table">
+                <div class="thead"><input type="checkbox" class="select"></div>
+                <div class="thead">Имя</div>
+                <div class="thead">Отдел/Вакансия</div>
+                <div class="thead">Этап собеседования</div>
+                <div class="thead">Дата подачи</div>
+                <div class="thead">Источник</div>
+                <div class="thead">Ссылка на резюме</div>
+                <div class="thead">Статус</div>
+                <div class="thead">Ответственный рекрутер</div>
+                <div class="thead">+Встреча</div>
+
+                <div><input type="checkbox" class="select"></div>
+                <div>Артём Хорев</div>
+                <div>Кузнечихинская, 100, IT, Разработчик C++</div>
+                <div>техническое собеседование</div>
+                <div>02.10.24 (4 дня)</div>
+                <div>HH.ru</div>
+                <div><a href="">ссылка</a></div>
+                <div>В работе</div>
+                <div>Анатолий Карпов</div>
+                <div><button>+Встреча</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="/script/table.js"></script>
+</body>
+</html>

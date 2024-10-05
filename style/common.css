@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --text-gray: #3f3f3f;
+    --silver: #5b5b5b;
+    --iris: #6153ccff;
+    --murrey: #a60067ff;
+    --bright-red: #E0008A;
+    --murrey-2: #961d4eff;
+    --black-bean: #360a14ff;
+    --section-margin: 3rem;
+}
+html {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Inter Tight", sans-serif;
+	font-weight: normal;
+    font-size: 16px;
+    color: var(--text-gray);
+    width: 100%;
+    height: 100%;
+}
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.circle-icon {
+    background-color: var(--silver);
+    border-radius: 50%;
+    padding: 2px;
+}
+hr {
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+.app-body {
+    margin-top: var(--section-margin);
+    padding: 2rem;
+}
+.section {
+    margin-left: auto;
+    margin-right: auto;
+}
+.hidden {
+    display: none;
+}

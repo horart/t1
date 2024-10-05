@@ -1,0 +1,78 @@
+.table {
+    display: grid;
+    grid-template-columns: 0.2fr 1.2fr 0.8fr 1.3fr 1fr 0.5fr 0.5fr 0.7fr 1.5fr 1fr;
+    width: 100%;
+    align-items: center;
+}
+.table-vacs {
+    grid-template-columns: 0.2fr 1.2fr 0.8fr 1.3fr 1fr 0.5fr 0.5fr 0.7fr 0.6fr;
+}
+.table-recs {
+    grid-template-columns: 0.1fr 1fr 0.3fr 0.1fr;
+}
+.thead {
+    background-color: var(--murrey-2);
+    color: white;
+    cursor: pointer;
+}
+.thead.up {
+    background-color: red;
+}
+.thead.down {
+    background-color: blue;
+}
+.table > div {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.table .second {
+    background-color: #fdfde3;
+}
+.table-filter {
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.table-filter input {
+    font-size: inherit;
+    width: 20em;
+}
+.table-filter[type="search"] {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+.filter {
+    position: relative;
+}
+.checkboxes {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(100%, 100%);
+    background-color: white;
+    width: fit-content;
+    padding: 1rem 3rem;
+}
+.checkboxes label * {
+    width: fit-content;
+}
+.checkboxes label {
+    display: flex;
+    gap: 1rem;
+}
+.right-filters {
+    display: flex;
+    gap: 20px;
+    margin-right: 20rem;
+}

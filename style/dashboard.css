@@ -1,0 +1,130 @@
+.app-body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1800px;
+}
+.app-grid {
+    display: grid;
+    grid-template-areas: "overview pending"
+    "quickcreate quickcreate"
+    "info info";
+    gap: 25px 50px;
+    grid-template-columns: 1fr 1fr;
+}
+
+h2 {
+    font-size: 35px;
+    margin-bottom: 1.5rem;
+}
+.overview-section {
+    grid-area: overview;
+    background-color: var(--bright-red);
+    border-radius: 25px;
+    padding: 2rem 3rem 3rem 3rem;
+    color: #ffffff;
+    align-self: start;
+}
+.overview-section .tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem 2rem;
+}
+.overview-section .tile {
+    padding: 2rem;
+    background-color: #ffffff;
+    color: var(--text-gray);
+    border-radius: 10px;
+}
+.overview-section h3 {
+    font-size: 50px;
+    text-align: center;
+}
+.overview-section p {
+    font-size: 30px;
+    text-align: center;
+}
+
+.pending-section {
+    grid-area: pending;
+    padding: 1rem 3rem 2rem 3rem;
+    border: 2px black solid;    
+    color: #111111;
+}
+.pending-section h2 {
+    text-align: center;
+}
+.pending-section .pending-list {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+}
+
+.quick-create-section {
+    grid-area: quickcreate;
+    background-color: var(--iris);
+    color: white;
+    padding: 1rem 3rem 2rem 3rem;
+    border-radius: 25px;
+}
+.quick-create {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.quick-create h2 {
+    padding: 0;
+    margin: 0;
+}
+.bigplus {
+    height: 150px;
+    filter: invert();
+}
+.quick-create input {
+    width: 20rem;
+}
+.quick-create .fields input, .quick-create .fields select {
+    font-size: inherit;
+    border-radius: 5px;
+    border: 0;
+}
+.quick-create label {
+    font-size: 30px;
+}
+.quick-create .create-form {
+    display: flex;
+    gap: 15px;
+    flex-grow: 1;
+    gap: 100px;
+    align-items: center;
+}
+.quick-create .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;    
+}
+.create-form .form-option {
+    font-size: inherit;
+}
+.create-form button[type="submit"] {
+    width: fit-content;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    border: 0;
+    color: inherit;
+    background-color: #ffffff;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    color: black;
+}
+
+.infogr-section {
+    grid-area: info;
+}
+.infogr-section h2 {
+    text-align: center;
+}
+.info-grid {
+    grid-template-columns: 2fr 1fr;
+}
