@@ -1,6 +1,6 @@
 <?php
-require 'db.php';
-$q = "SELECT r.id as id, r.name as name, COUNT(p.id) AS cnt FROM recruiters AS r LEFT JOIN people AS p ON p.recruiter_id=r.id GROUP BY r.id";
+require 'php/db.php';
+$q = "SELECT r.id as id, r.name as name, SUM(CASE WHEN p.status=0 THEN 1 ELSE 0 END) AS cnt FROM recruiters AS r LEFT JOIN people AS p ON p.recruiter_id=r.id GROUP BY r.id";
 $p = $pdo->prepare($q);
 $p->execute([]);
 $fa = $p->fetchAll();
@@ -18,11 +18,11 @@ $fa = $p->fetchAll();
         <h1>HRPanel+</h1>
         <nav class="site-nav">
             <a href="/">Главная</a>
-            <a href="/vacancies.html">Вакансии</a>
-            <a href="/resumes.html">Резюме</a>
-            <a href="/recruiters.html" class="current-page">Рекрутеры</a>
-            <a href="/interviews.html">Интервью</a>
-            <a href="/analyzer.html">Анализатор</a>
+            <a href="/vacancies.php">Вакансии</a>
+            <a href="/resumes.php">Резюме</a>
+            <a href="/recruiters.php" class="current-page">Рекрутеры</a>
+            <a href="/interviews.php">Интервью</a>
+            <a href="/analyzer.php">Анализатор</a>
         </nav>
         <div class="header-icons">
             <div class="circle-icon">
@@ -55,7 +55,7 @@ $fa = $p->fetchAll();
                 <div class="row" data-id="<?= $row['id'] ?>">
                     <div><input type="checkbox" class="select"></div>
                     <div><?= $row['name'] ?></div>
-                    <div><?= $row['cnt'] ?></div>
+                    <div><a href="resumes.php?status[]=0&recruiter[]=<?= $row['id'] ?>"><?= $row['cnt'] ?></a></div>
                     <div><a href="create.php?type=task&id=<?= $row['id'] ?>">+Задание</a></div>
                 </div>
                 <?php endforeach; ?>

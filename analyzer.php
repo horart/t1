@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRPanel+ | Анализатор</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <html>
+<head>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/analyzer.css">:
+    <meta charset="UTF-8"> 
+</head>
+<body>
+    <header class="site-header">
+        <h1>HRPanel+</h1>
+        <nav class="site-nav">
+            <a href="/">Главная</a>
+            <a href="/vacancies.php">Вакансии</a>
+            <a href="/resumes.php">Резюме</a>
+            <a href="/recruiters.php">Рекрутеры</a>
+            <a href="/interviews.php">Интервью</a>
+            <a href="/analyzer.php" class="current-page">Анализатор</a>
+        </nav>
+        <div class="header-icons">
+            <div class="circle-icon">
+                <img src="/icons/signout.svg" alt="выйти">
+            </div>
+            <div class="circle-icon">
+                <img src="/icons/profile.svg" alt="выйти">
+            </div>
+        </div>
+    </header>
+    <hr>
+    <div class="app">   
+        <div class="app-body">
+            <h2>Аналитика</h2>
+            <div class="filters">
+                <label>с <input type="date" id="datefrom"></label>
+                <label>по <input type="date" id="dateto"></label>
+                <button id="update">Обновить</button>
+            </div>
+            <!-- blocks -->
+             <div class="anal-grid">
+                <div class="anal-piece anal-funnel">
+                    <h2>Воронка найма</h2>
+                    <div id="funnel"></div>
+                </div>
+                <div class="anal-piece">
+                    <h3>Количество обработанных резюме</h3>
+                    <div id="processedresumes"></div>
+                </div>
+                <div class="anal-piece">
+                    <h3>Количество интервью на позицию</h3>
+                    <div id="interview"></div>
+                </div>
+                <div class="anal-piece">
+                    <h3>Распределение закрытых</h3>
+                    <div id="closed"></div>
+                </div>
+                <div class="anal-piece">
+                    <h3>Среднее время закрытия вакансий рекрутерами</h3>
+                    <div id="recruiters"></div>
+                </div>
+             </div>
+        </div>
+    </div>
+    <script src="/script/analyzer.js"></script>
+</body>
+</html>
+</body>
+</html>

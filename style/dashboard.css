@@ -128,3 +128,6 @@ h2 {
 .info-grid {
     grid-template-columns: 2fr 1fr;
 }
+.create-option {
+    display: contents;
+}

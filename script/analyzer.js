@@ -134,59 +134,57 @@ var options = {
 
   var chart = new ApexCharts(document.querySelector("#closed"), options);
   chart.render();
-
-  var options = {
-    series: [
-    {
-      name: "кандидатов",
-      data: [1380, 1100, 990, 880, 740, 548, 330, 200],
-    },
-  ],
-    chart: {
-    type: 'bar',
-    height: 350,
-  },
-  plotOptions: {
-    bar: {
-      borderRadius: 0,
-      horizontal: true,
-      barHeight: '80%',
-      isFunnel: true,
-    },
-  },
-  dataLabels: {
-    enabled: true,
-    formatter: function (val, opt) {
-      return opt.w.globals.labels[opt.dataPointIndex] + ':  ' + val
-    },
-    dropShadow: {
-      enabled: true,
-    },
-  },
-  title: {
-    text: 'Воронка продаж',
-    align: 'middle',
-  },
-  xaxis: {
-    categories: [
-      '1 этап',
-      '2 этап',
-'3 этап',
-'4 этап',
-'5 этап',
-'6 этап',
-'7 этап',
-'8 этап',
+function updateChart() {
+  let s = '';
+  if(datefrom.value && dateto.value) s = '&date_from=' + datefrom.value + '&date_to=' + dateto.value;
+  fetch('analytics.php?type=funnel'+s).then(response=>response.json()).then(response=>{
+    var options = {
+      series: [
+      {
+        name: "кандидатов",
+        data: response['data'],
+      },
     ],
-  },
-  legend: {
-    show: false,
-  },
-  };
-
-  var chart = new ApexCharts(document.querySelector("#funnel"), options);
-  chart.render();
-
+      chart: {
+      type: 'bar',
+      height: 350,
+    },
+    plotOptions: {
+      bar: {
+        borderRadius: 0,
+        horizontal: true,
+        barHeight: '80%',
+        isFunnel: true,
+      },
+    },
+    dataLabels: {
+      enabled: true,
+      formatter: function (val, opt) {
+        return opt.w.globals.labels[opt.dataPointIndex] + ':  ' + val
+      },
+      dropShadow: {
+        enabled: true,
+      },
+    },
+    title: {
+      text: 'Воронка найма за месяц',
+      align: 'middle',
+    },
+    xaxis: {
+      categories: response['cats'],
+    },
+    legend: {
+      show: false,
+    },
+    };
+  
+    var chart = new ApexCharts(document.querySelector("#funnel"), options);
+    chart.render();
+  
+  });
+}
+updateChart();
+document.querySelector('#update').addEventListener('click', updateChart);
 
         
   var options = {

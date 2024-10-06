@@ -1,8 +1,9 @@
-var options = {
+fetch('analytics.php?type=funnel').then(response=>response.json()).then(response=>{
+  var options = {
     series: [
     {
       name: "кандидатов",
-      data: [1380, 1100, 990, 880, 740, 548, 330, 200],
+      data: response['data'],
     },
   ],
     chart: {
@@ -27,20 +28,11 @@ var options = {
     },
   },
   title: {
-    text: 'Воронка найма',
+    text: 'Воронка найма за месяц',
     align: 'middle',
   },
   xaxis: {
-    categories: [
-      '1 этап',
-      '2 этап',
-'3 этап',
-'4 этап',
-'5 этап',
-'6 этап',
-'7 этап',
-'8 этап',
-    ],
+    categories: response['cats'],
   },
   legend: {
     show: false,
@@ -50,3 +42,26 @@ var options = {
   var chart = new ApexCharts(document.querySelector("#funnel"), options);
   chart.render();
 
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  function updateForm() {
+    sel = document.querySelector('.form-option').value;
+    document.querySelector('.create-form').action = 'create.php?type=' + sel;
+    document.querySelectorAll('.create-option').forEach(function(e) {
+      if(!e.classList.contains(sel)) {
+        e.classList.add('hidden');
+        e.querySelectorAll('input, select').forEach(e=>{e.required = false});
+      }
+      else {
+        e.classList.remove('hidden');
+        e.querySelectorAll('input, select').forEach(e=>{e.required = true});
+
+      }
+    });
+  }
+  document.querySelector('.form-option').addEventListener('change', updateForm)
+  updateForm();
+
+
+});

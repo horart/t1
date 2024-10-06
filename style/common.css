@@ -48,5 +48,5 @@ hr {
     margin-right: auto;
 }
 .hidden {
-    display: none;
+    display: none !important;
 }
