@@ -1,4 +1,4 @@
-<html>
+<html></html>
 <head>
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/table.css">
@@ -11,9 +11,9 @@
         <nav class="site-nav">
             <a href="/">Главная</a>
             <a href="/vacancies.html">Вакансии</a>
-            <a href="/resumes.html" class="current-page">Резюме</a>
+            <a href="/resumes.html">Резюме</a>
             <a href="/recruiters.html">Рекрутеры</a>
-            <a href="/interviews.html">Интервью</a>
+            <a href="/interviews.html" class="current-page">Интервью</a>
             <a href="/analyzer.html">Анализатор</a>
         </nav>
         <div class="header-icons">
@@ -64,39 +64,31 @@
                     </dev>
                 </div>
             </div>
-            <div class="table">
-                <div class="thead"><input type="checkbox" class="select"></div>
-                <div class="thead">Имя</div>
-                <div class="thead">Отдел/Вакансия</div>
-                <div class="thead">Этап собеседования</div>
-                <div class="thead">Дата подачи</div>
-                <div class="thead">Источник</div>
-                <div class="thead">Ссылка на резюме</div>
-                <div class="thead">Статус</div>
-                <div class="thead">Ответственный рекрутер</div>
-                <div class="thead">+Интервью</div>
-
-                <div><input type="checkbox" class="select"></div>
-                <div class="editable"><span>Артём Хорев</span><input type="text" class="edit-cell hidden"></div>
-                <div>IT/Разработчик C++</div>
-                <div class="editable"><select>
-                        <option>техническое собеседование</option>
-                        <option>оффер</option>
-                </select></div>
-                <div class="editable"><span>02.10.24</span><input type="text" class="edit-cell hidden"></div>
-                <div><select>
-                    <option>HH.ru</option>
-                    <option>Авито</option>
-                </select></div>
-                <div class="editable"><span><a href="#">Ссылка</a></span><input type="text" class="edit-cell hidden"></div>
-                <div><select>
-                    <option>В работе</option>
-                    <option>Отказано</option>
-                    <option>Принят</option>
-                    <option>Уволился</option>
-            </select></div>
-                <div>Анатолий Карпов</div>
-                <div><button>+Интервью</button></div>
+            <div class="table table-ins">
+                    <div class="thead"><input type="checkbox" class="select"></div>
+                    <div class="thead">Имя</div>
+                    <div class="thead">Отдел/Вакансия</div>
+                    <div class="thead">Приоритет</div>
+                    <div class="thead">Этап собеседования</div>
+                    <div class="thead">Дата <br>(с подачи)</div>
+                    <div class="thead">Ссылка на резюме</div>
+                    <div class="thead">Оценка</div>
+                    <div class="thead">Рекрутер</div>
+                    <div class="thead">Статус</div>
+                    <!-- принят отклонен или прошел -->
+                    <div class="thead">+Интервью</div>
+                    <div><input type="checkbox" class="select"></div>
+                    <div>Артём Хорев</div>
+                    <div>IT/Разработчик C++</div>
+                    <div>1</div>
+                    <div>техническое собеседование</div>
+                    <div>07.10.24 (5 дн.)</div>
+                    <div><a href="">ссылка</a></div>
+                    <div>8</div>
+                    <div>Анатолий Карпов</div>
+                    <div>Прошёл</div>
+                    <div><button>+Интервью</button></div>
+                
             </div>
         </div>
     </div>

@@ -27,7 +27,7 @@ var options = {
     },
   },
   title: {
-    text: 'Recruitment Funnel',
+    text: 'Воронка найма',
     align: 'middle',
   },
   xaxis: {

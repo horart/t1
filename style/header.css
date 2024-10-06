@@ -39,7 +39,7 @@
 }
 .site-nav {
     display: flex;
-    gap: 5vw;
+    gap: 3vw;
     margin-right: 10%;
     font-size: 30px;
     font-weight: 700;

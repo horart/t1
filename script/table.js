@@ -27,4 +27,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         document.querySelectorAll('.thead').forEach(el => { if(el != e) el.classList.remove('up', 'down') });
     }));
+    let editing = false;
+    document.querySelectorAll('.table .editable').forEach(e => { // CHANGE
+        e.addEventListener('click', function() {
+        // add link support
+        if(!editing) {
+            e.querySelector('.edit-cell').value = e.querySelector('span').textContent;
+            e.querySelector('.edit-cell').classList.toggle('hidden');
+            e.querySelector('span').textContent = '';
+            e.querySelector('.edit-cell').focus();
+            editing = true;
+        }
+    });
+    e.querySelector('.edit-cell').addEventListener('blur', function() {
+        e.querySelector('.edit-cell').classList.toggle('hidden');
+        e.querySelector('span').textContent = e.querySelector('.edit-cell').value;
+        editing = false;
+    });
 });
+}); 

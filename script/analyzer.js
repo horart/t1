@@ -164,7 +164,7 @@ var options = {
     },
   },
   title: {
-    text: 'Recruitment Funnel',
+    text: 'Воронка продаж',
     align: 'middle',
   },
   xaxis: {
